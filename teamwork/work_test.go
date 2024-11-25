@@ -3,7 +3,7 @@ package teamwork_test
 import (
 	"testing"
 
-	"github.com/hihibug/microdule/teamwork"
+	"github.com/hihibug/microdule/v2/teamwork"
 )
 
 func TestTeamWork(t *testing.T) {

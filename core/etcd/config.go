@@ -2,7 +2,7 @@ package etcd
 
 import (
 	"errors"
-	"github.com/hihibug/microdule/core"
+	"github.com/hihibug/microdule/v2/core"
 	"go.uber.org/zap"
 	"reflect"
 )

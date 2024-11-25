@@ -2,7 +2,7 @@ package viper
 
 import (
 	"github.com/fsnotify/fsnotify"
-	"github.com/hihibug/microdule/core/gorm"
+	"github.com/hihibug/microdule/v2/core/gorm"
 	"github.com/spf13/viper"
 )
 

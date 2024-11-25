@@ -2,13 +2,14 @@ package zap
 
 import (
 	"fmt"
-	"github.com/hihibug/microdule/core/utils"
-	zaprotatelogs "github.com/lestrrat-go/file-rotatelogs"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"os"
 	"path"
 	"time"
+
+	"github.com/hihibug/microdule/v2/core/utils"
+	zaprotatelogs "github.com/lestrrat-go/file-rotatelogs"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 type (

@@ -1,9 +1,9 @@
 package rest
 
 import (
-	conf "github.com/hihibug/microdule/rest/config"
-	"github.com/hihibug/microdule/rest/request"
-	"github.com/hihibug/microdule/rest/response"
+	conf "github.com/hihibug/microdule/v2/rest/config"
+	"github.com/hihibug/microdule/v2/rest/request"
+	"github.com/hihibug/microdule/v2/rest/response"
 )
 
 type Rest interface {

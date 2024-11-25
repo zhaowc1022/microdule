@@ -6,12 +6,12 @@ package rest_test
 //	"github.com/gin-gonic/gin"
 //	"github.com/go-playground/validator/v10"
 //	"github.com/gofiber/fiber/v2"
-//	//"github.com/hihibug/microdule/rest/rest_fiber"
-//	//"github.com/hihibug/microdule/rest/rest_gin"
+//	//"github.com/hihibug/microdule/v2/rest/rest_fiber"
+//	//"github.com/hihibug/microdule/v2/rest/rest_gin"
 //	"testing"
 //
-//	"github.com/hihibug/microdule/rest"
-//	httpConf "github.com/hihibug/microdule/rest/config"
+//	"github.com/hihibug/microdule/v2/rest"
+//	httpConf "github.com/hihibug/microdule/v2/rest/config"
 //)
 //
 //func TestFiberRest(t *testing.T) {

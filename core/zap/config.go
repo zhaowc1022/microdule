@@ -2,8 +2,9 @@ package zap
 
 import (
 	"errors"
-	"github.com/hihibug/microdule/core"
 	"reflect"
+
+	"github.com/hihibug/microdule/v2/core"
 )
 
 var (

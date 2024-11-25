@@ -2,16 +2,16 @@ package microdule
 
 import (
 	"context"
-	"github.com/hihibug/microdule/rest"
+	"github.com/hihibug/microdule/v2/rest"
 	"reflect"
 
-	"github.com/hihibug/microdule/core/etcd"
-	"github.com/hihibug/microdule/core/gorm"
-	"github.com/hihibug/microdule/core/redis"
-	"github.com/hihibug/microdule/core/viper"
-	"github.com/hihibug/microdule/core/zap"
-	"github.com/hihibug/microdule/rpc"
-	"github.com/hihibug/microdule/teamwork"
+	"github.com/hihibug/microdule/v2/core/etcd"
+	"github.com/hihibug/microdule/v2/core/gorm"
+	"github.com/hihibug/microdule/v2/core/redis"
+	"github.com/hihibug/microdule/v2/core/viper"
+	"github.com/hihibug/microdule/v2/core/zap"
+	"github.com/hihibug/microdule/v2/rpc"
+	"github.com/hihibug/microdule/v2/teamwork"
 )
 
 type (

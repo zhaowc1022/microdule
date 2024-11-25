@@ -2,13 +2,14 @@ package gorm
 
 import (
 	"errors"
-	"github.com/hihibug/microdule/core"
-	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
 	"log"
 	"os"
 	"reflect"
 	"time"
+
+	"github.com/hihibug/microdule/v2/core"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 var (

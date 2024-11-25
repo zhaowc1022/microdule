@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hihibug/microdule/rpc"
+	"github.com/hihibug/microdule/v2/rpc"
 
-	"github.com/hihibug/microdule/core/utils"
+	"github.com/hihibug/microdule/v2/core/utils"
 )
 
 var global *Options

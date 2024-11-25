@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	grpcs "github.com/hihibug/microdule/rpc/grpc"
+	grpcs "github.com/hihibug/microdule/v2/rpc/grpc"
 	etcdClientV3 "go.etcd.io/etcd/client/v3"
 	"google.golang.org/grpc"
 )

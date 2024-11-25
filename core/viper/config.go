@@ -1,11 +1,11 @@
 package viper
 
 import (
-	"github.com/hihibug/microdule/core/etcd"
-	"github.com/hihibug/microdule/core/redis"
-	"github.com/hihibug/microdule/core/zap"
-	http "github.com/hihibug/microdule/rest/config"
-	"github.com/hihibug/microdule/rpc"
+	"github.com/hihibug/microdule/v2/core/etcd"
+	"github.com/hihibug/microdule/v2/core/redis"
+	"github.com/hihibug/microdule/v2/core/zap"
+	http "github.com/hihibug/microdule/v2/rest/config"
+	"github.com/hihibug/microdule/v2/rpc"
 )
 
 type Config struct {

@@ -11,7 +11,7 @@ import (
 )
 
 type Teamwork interface {
-	Reginster(name string, habdle func() error) TeamworkClose
+	Register(name string, handle func() error) TeamworkClose
 	WorkNum() int
 	Start() error
 	Close()
@@ -39,7 +39,7 @@ func NewTeamwork() Teamwork {
 	}
 }
 
-func (t *TeamworkStruct) Reginster(name string, handle func() error) TeamworkClose {
+func (t *TeamworkStruct) Register(name string, handle func() error) TeamworkClose {
 	maps.Copy(t.Handles, map[string]func() error{name: handle})
 	return &TeamworkCloseStruct{
 		T: t,

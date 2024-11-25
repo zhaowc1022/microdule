@@ -49,11 +49,11 @@ func TestNewService(t *testing.T) {
 	//
 	//a := rest.Route.Group("")
 	//{
-	//	a.GET("/test", func(context *gin.Context) {
+	//	a.GET("/test", func(context *rest_gin.Context) {
 	//		fmt.Println("test")
 	//		global.Log.Client().Info("test")
 	//	})
-	//	a.GET("/err", func(c *gin.Context) {
+	//	a.GET("/err", func(c *rest_gin.Context) {
 	//		panic("test")
 	//	})
 	//}

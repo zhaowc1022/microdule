@@ -49,7 +49,7 @@ func (s *service) Close() {
 
 func (s *service) Start() error {
 	if s.opts.Http != nil {
-		s.opts.Teamwork.Reginster("http", func() error {
+		s.opts.Teamwork.Reginster("rest", func() error {
 			return s.opts.Http.Run()
 		})
 	}

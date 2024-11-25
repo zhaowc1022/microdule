@@ -4,8 +4,8 @@ import (
 	"github.com/hihibug/microdule/core/etcd"
 	"github.com/hihibug/microdule/core/redis"
 	"github.com/hihibug/microdule/core/zap"
+	http "github.com/hihibug/microdule/rest/config"
 	"github.com/hihibug/microdule/rpc"
-	"github.com/hihibug/microdule/web"
 )
 
 type Config struct {
@@ -13,7 +13,7 @@ type Config struct {
 	Etcd  *etcd.Config  `json:"etcd" yaml:"etcd"`
 	Redis *redis.Config `json:"redis" yaml:"redis"`
 	Log   *zap.Config   `json:"log" yaml:"log"`
-	Http  *web.Config   `json:"http" yaml:"rest"`
+	Http  *http.Config  `json:"rest" yaml:"rest"`
 	Rpc   *rpc.Config   `json:"rpc" yaml:"rpc"`
 }
 

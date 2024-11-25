@@ -8,10 +8,10 @@ import (
 	"github.com/hihibug/microdule/core/etcd"
 	"github.com/hihibug/microdule/core/gorm"
 	"github.com/hihibug/microdule/core/redis"
-	"github.com/hihibug/microdule/core/teamwork"
 	"github.com/hihibug/microdule/core/viper"
 	"github.com/hihibug/microdule/core/zap"
 	"github.com/hihibug/microdule/rpc"
+	"github.com/hihibug/microdule/teamwork"
 )
 
 type (
@@ -25,7 +25,7 @@ type (
 		Name     string
 		Config   viper.Viper
 		Log      zap.Log
-		Http     *rest.Http
+		Http     *rest.Rest
 		Rpc      rpc.Rpc
 		Teamwork teamwork.Teamwork
 
@@ -110,7 +110,7 @@ func Redis(r *redis.Config) Option {
 	}
 }
 
-func Http(r *rest.Http) Option {
+func Http(r *rest.Rest) Option {
 	return func(options *Options) {
 		options.Http = r
 	}

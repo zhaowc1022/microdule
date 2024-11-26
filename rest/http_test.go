@@ -1,21 +1,23 @@
 package rest_test
 
 //
+////
 //import (
 //	"fmt"
 //	"github.com/gin-gonic/gin"
 //	"github.com/go-playground/validator/v10"
 //	"github.com/gofiber/fiber/v2"
+//	"github.com/hihibug/microdule_fiber"
+//	"github.com/hihibug/microdule_gin"
 //	//"github.com/hihibug/microdule/v2/rest/rest_fiber"
 //	//"github.com/hihibug/microdule/v2/rest/rest_gin"
 //	"testing"
 //
-//	"github.com/hihibug/microdule/v2/rest"
 //	httpConf "github.com/hihibug/microdule/v2/rest/config"
 //)
 //
 //func TestFiberRest(t *testing.T) {
-//	r := rest.NewRest(&httpConf.Config{
+//	r := microdule_fiber.NewFiber(&httpConf.Config{
 //		Mode:    "fiber",
 //		LogPath: "",
 //		UseHtml: false,
@@ -23,7 +25,7 @@ package rest_test
 //	})
 //
 //	if r.Client() != nil {
-//		rs := r.Client().(*rest_fiber.Fiber)
+//		rs := r.Client().(*microdule_fiber.Fiber)
 //		fmt.Println(rs)
 //		err := rs.Validator.RegisterValidator("test", "不能为空且不等于admin", notNullAndAdmin)
 //		fmt.Println(err)
@@ -58,7 +60,13 @@ package rest_test
 //}
 //
 //func TestGinRest(t *testing.T) {
-//	r := rest.NewRest(&httpConf.Config{
+//	//r := rest.NewRest(&httpConf.Config{
+//	//	Mode:    "gin",
+//	//	LogPath: "",
+//	//	UseHtml: false,
+//	//	Addr:    "8999",
+//	//})
+//	r := microdule_gin.NewGin(&httpConf.Config{
 //		Mode:    "gin",
 //		LogPath: "",
 //		UseHtml: false,
@@ -66,7 +74,7 @@ package rest_test
 //	})
 //
 //	if r.Client() != nil {
-//		rs := r.Client().(*rest_gin.Gin)
+//		rs := r.Client().(*microdule_gin.Gin)
 //		fmt.Println(rs)
 //		err := rs.Validator.RegisterValidator("test", "不能为空且不等于admin", notNullAndAdmin)
 //		fmt.Println(err)

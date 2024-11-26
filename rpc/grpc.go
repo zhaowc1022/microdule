@@ -9,6 +9,12 @@ import (
 	"google.golang.org/grpc"
 )
 
+type Grpc struct {
+	RpcSrv       *grpc.Server
+	Config       *Config
+	EtcdRegister *grpcs.ServiceRegister
+}
+
 func NewGrpc(c *Config, opt ...grpc.ServerOption) Rpc {
 	grpcServer := grpc.NewServer(opt...)
 

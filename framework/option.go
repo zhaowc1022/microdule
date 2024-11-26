@@ -1,4 +1,4 @@
-package microdule
+package framework
 
 import (
 	"context"
@@ -25,7 +25,7 @@ type (
 		Name     string
 		Config   viper.Viper
 		Log      zap.Log
-		Http     *rest.Rest
+		Http     rest.Rest
 		Rpc      rpc.Rpc
 		Teamwork teamwork.Teamwork
 
@@ -110,9 +110,10 @@ func Redis(r *redis.Config) Option {
 	}
 }
 
-func Http(r *rest.Rest) Option {
+func Http(r rest.Rest) Option {
 	return func(options *Options) {
 		options.Http = r
+
 	}
 }
 

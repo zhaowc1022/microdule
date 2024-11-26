@@ -1,14 +1,13 @@
-package microdule
+package framework
 
 import (
+	"fmt"
+	httpConf "github.com/hihibug/microdule/v2/rest/config"
+	"github.com/hihibug/microdule_gin"
 	"log"
 	"sync"
 	"testing"
 	"time"
-
-	"github.com/hihibug/microdule/v2/rpc"
-
-	"github.com/hihibug/microdule/v2/core/utils"
 )
 
 var global *Options
@@ -38,8 +37,17 @@ func TestNewService(t *testing.T) {
 	s.Init(
 		//Redis(nil),
 		//Gorm(global.Config.ConfigToGormMysql(gorm.SetGormConfig(gormConf))),
-		Etcd(global.Config.Data.Etcd),
+		//Etcd(global.Config.Data.Etcd),
+		Http(microdule_gin.NewGin(&httpConf.Config{
+			Mode:    "fiber",
+			LogPath: "",
+			UseHtml: false,
+			Addr:    "8999",
+		})),
 	)
+	fmt.Println(global.Config.Data.Http)
+	//fmt.Println()
+	fmt.Println(s.Options().Http)
 	//
 	////关闭链接
 	//defer s.Close()
@@ -58,17 +66,17 @@ func TestNewService(t *testing.T) {
 	//	})
 	//}
 
-	ip, _ := utils.ExternalIP()
-	global.Config.Data.Rpc.IP = ip
-	grpcData := rpc.NewGrpc(global.Config.Data.Rpc)
-	// config.RegisterGrpc(grpcData.Client().RpcSrv)
-
-	register, err := grpcData.Register(global.Etcd.Clients())
-	if err != nil {
-		panic(err)
-	}
-	grpcData.Client().(*rpc.Grpc).EtcdRegister = register
-	s.Init(Rpc(grpcData))
+	//ip, _ := utils.ExternalIP()
+	//global.Config.Data.Rpc.IP = ip
+	//grpcData := rpc.NewGrpc(global.Config.Data.Rpc)
+	//// config.RegisterGrpc(grpcData.Client().RpcSrv)
+	//
+	//register, err := grpcData.Register(global.Etcd.Clients())
+	//if err != nil {
+	//	panic(err)
+	//}
+	//grpcData.Client().(*rpc.Grpc).EtcdRegister = register
+	//s.Init(Rpc(grpcData))
 	// rpc := s.Rpc().Client().Grpc
 	//register, err := s.Rpc().Client().Register(global.Etcd.Clients())
 	//if err != nil {
@@ -76,8 +84,8 @@ func TestNewService(t *testing.T) {
 	//}
 	//go register.ListenLeaseRespChan()
 	//
-	grpcData.Run()
-	//rest.Run()
+	//grpcData.Run()
+	s.Options().Http.Run()
 }
 
 func GoMysql(num, cnum int) {

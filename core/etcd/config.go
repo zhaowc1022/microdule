@@ -2,9 +2,10 @@ package etcd
 
 import (
 	"errors"
+	"reflect"
+
 	"github.com/hihibug/microdule/v2/core"
 	"go.uber.org/zap"
-	"reflect"
 )
 
 var (
@@ -21,7 +22,6 @@ type Config struct {
 }
 
 func (c *Config) Validate() error {
-
 	if reflect.DeepEqual(c, &Config{}) {
 		return core.ErrEmptyConfig
 	}

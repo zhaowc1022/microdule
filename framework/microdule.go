@@ -1,4 +1,4 @@
-package microdule
+package framework
 
 type Service interface {
 	Name() string
@@ -27,7 +27,6 @@ func (s *service) Options() *Options {
 }
 
 func (s *service) Close() {
-
 	s.opts.Teamwork.Close()
 
 	if s.opts.Rpc != nil {
@@ -49,13 +48,13 @@ func (s *service) Close() {
 
 func (s *service) Start() error {
 	if s.opts.Http != nil {
-		s.opts.Teamwork.Reginster("rest", func() error {
+		s.opts.Teamwork.Register("rest", func() error {
 			return s.opts.Http.Run()
 		})
 	}
 
 	if s.opts.Rpc != nil {
-		s.opts.Teamwork.Reginster("rpc ", func() error {
+		s.opts.Teamwork.Register("rpc ", func() error {
 			return s.opts.Rpc.Run()
 		})
 	}
